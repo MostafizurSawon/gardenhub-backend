@@ -1,4 +1,4 @@
-asgiref
+
 attrs
 autopep8
 certifi
@@ -16,6 +16,7 @@ django-email
 django-environ
 django-filter
 djangorestframework
+djangorestframework-simplejwt
 env
 filelock
 idna
@@ -39,6 +40,7 @@ PyAutoGUI
 pycodestyle
 PyGetWindow
 pyjokes
+PyJWT
 PyMsgBox
 PyMySQL
 pyparsing
