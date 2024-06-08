@@ -100,9 +100,11 @@ def activate(request, uid64, token):
     if user is not None and default_token_generator.check_token(user, token):
         user.is_active = True
         user.save()
-        return redirect('login')
+        # return redirect('login')
+        return redirect('https://mygardenhub.netlify.app/login/')
     else:
-        return redirect('register')
+        # return redirect('register')
+        return redirect('https://mygardenhub.netlify.app/register/')
     
 
 class UserLoginApiView(APIView):
