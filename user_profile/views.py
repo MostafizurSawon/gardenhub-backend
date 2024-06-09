@@ -36,7 +36,7 @@ from django.shortcuts import redirect
 #         return Response(serializer.data)
 
 class UserDetailViewSet(viewsets.ViewSet):
-    permission_classes = [IsAuthenticated]  # Optional, add permissions as needed
+    # permission_classes = [IsAuthenticated]  # Optional, add permissions as needed
 
     def list(self, request):
         users = User.objects.all()  # Retrieve all users

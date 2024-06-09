@@ -48,9 +48,12 @@ class PlantViewset(viewsets.ModelViewSet):
 
     def perform_create(self, serializer):
         # Assign the current user as the owner of the Plant
-        serializer.save(user=self.request.user)
-        # serializer.save()
+        # serializer.save(user=self.request.user)
+        serializer.save()
     
 class ReviewViewset(viewsets.ModelViewSet):
     queryset = models.Review.objects.all()
     serializer_class = serializers.ReviewSerializer
+
+
+
