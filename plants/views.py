@@ -35,12 +35,11 @@ class PlantViewset(viewsets.ModelViewSet):
     filter_backends = [filters.SearchFilter]
     pagination_class = PlantPagination
     search_fields = ['user__first_name', 'user__email', 'category__name']
-    # permission_classes = [IsAuthenticated]  # Enforce authentication
+    permission_classes = [IsAuthenticated]  # Enforce authentication
 
     def perform_create(self, serializer):
         # Assign the current user as the owner of the Plant
-        serializer.save()
-        # serializer.save(user=self.request.user)
+        serializer.save(user=self.request.user)
     
 class ReviewViewset(viewsets.ModelViewSet):
     queryset = models.Review.objects.all()

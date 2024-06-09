@@ -16,7 +16,7 @@ class Plant(models.Model):
     price = models.DecimalField(null=True, blank=True,default=4.99,max_digits=10, decimal_places=2)
     category = models.ForeignKey(Category,on_delete = models.CASCADE, default=1,blank=True, null=True)
     # category = models.ManyToManyField(Category)
-    user = models.ForeignKey(User, on_delete = models.CASCADE,)
+    user = models.ForeignKey(User, on_delete = models.CASCADE, blank=True, null=True)
     # image = models.ImageField(upload_to="plants/images/")
     image = models.URLField(blank=True, null=True)
     description = models.TextField()
