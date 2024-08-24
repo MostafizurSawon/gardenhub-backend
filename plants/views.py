@@ -35,6 +35,7 @@ class PlantViewset(viewsets.ModelViewSet):
     filter_backends = [filters.SearchFilter]
     pagination_class = PlantPagination
     search_fields = [
+        'id',
         'title',                  # Plant title
         'description',            # Plant description
         'category__name',         # Category name
